@@ -41,7 +41,7 @@ def main():
     table_data = [] # creates a table for formating output
     for x in sorted_ips.keys(): # adds strings to 2d list so we can format output
         if sorted_ips.get(x) >= 10: # any with more than 10 ips gets added to output
-            data = requests.get(f'https://api.ipdata.co/{x}?api-key={"90b01aea1088b7ab2601c67b89b2118ddd8cbbc933ff52628e71769f"}').json()   # uses an api for country code, couldnt get geolite2 to work
+            data = requests.get(f'https://api.ipdata.co/{x}?api-key={"KEY"}').json()   # uses an api for country code, couldnt get geolite2 to work
             country_code = data["country_code"] # gets country code for the ip
             col = []
             col.append(sorted_ips.get(x)); col.append(x); col.append(country_code)  # and appends all three fields to teh table (Count, IP Address, and Country)
